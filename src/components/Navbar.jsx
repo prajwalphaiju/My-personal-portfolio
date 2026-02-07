@@ -15,7 +15,7 @@ export const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false);
 
   return (
-    <header className="fixed top-0 left-0 right-0 bg-transperant py-5 ">
+    <header className="fixed top-0 left-0 right-0 bg-transperant py-5 z-50 ">
       <nav className="container mx-2 px-6 flex items-center justify-between">
         <a href="#" className="group relative inline-block">
           {/* The "light" layer, initially hidden  */}
