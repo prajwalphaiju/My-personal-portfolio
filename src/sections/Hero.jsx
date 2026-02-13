@@ -1,7 +1,28 @@
 import { Button } from "@/components/Button";
-import { ArrowRight, Download, Github, Linkedin } from "lucide-react";
-import backgroundImage from "@/assets/background.png";
+import {
+  ArrowRight,
+  Download,
+  Github,
+  Linkedin,
+  ChevronDown,
+} from "lucide-react";
 import { AnimatedBorderButton } from "../components/AnimatedBorderButton";
+import backgroundImage from "@/assets/background.png";
+import profileImage from "@/assets/profile-image.png";
+
+const skills = [
+  "React",
+  "Next.js",
+  "TypeScript",
+  "JavaScript",
+  "Express",
+  "PHP",
+  "AWS",
+  "Tailwind CSS",
+  "Figma",
+  "Git",
+  "GitHub Actions",
+];
 
 export const Hero = () => {
   return (
@@ -59,9 +80,10 @@ export const Hero = () => {
                 </span>
               </h1>
               <p className="text-lg text-muted-foreground max-w-lg animate-fade-in animation-delay-200">
-                Hi, I’m Prajwal Phaiju — IT Graduate and Software Engineer. I
-                build production-ready applications with a strong focus on
-                stability, performance, and reliability.
+                Hi, I'm Prajwal Phaiju. I'm a Software Engineer specializing in
+                building stable, production-ready applications. I build
+                production-ready applications with a strong focus on stability,
+                performance, and reliability.
                 <br />
                 <br />
                 <span className="font-serif  font-normal text-white">
@@ -90,15 +112,84 @@ export const Hero = () => {
                   href: "https://www.linkedin.com/in/prajwalphaiju/",
                 },
               ].map((social, index) => (
-                <a key={index} href={social.href} className="p-2 rounded-full glass hover:bg-primary/10 hover:text-primary transition-all duration-300">
-                  {<social.icon  className="w-6 h-6"/>}
+                <a
+                  key={index}
+                  href={social.href}
+                  className="p-2 rounded-full glass hover:bg-primary/10 hover:text-primary transition-all duration-300"
+                >
+                  {<social.icon className="w-6 h-6" />}
                 </a>
               ))}
             </div>
           </div>
           {/* Right section - Profile Image */}
+          <div className="relative animate-fade-in animation-delay-300">
+            {/*Profile Image */}
+            <div className="relative max-w-md mx-auto">
+              {/*this div adds a glow around the image */}
+              <div
+                className="absolute inset-0 
+              rounded-3xl bg-gradient-to-br 
+              from-primary/30 via-transparent 
+              to-primary/10 blur-2xl animate-pulse"
+              />
+              <div className="relative glass rounded-3xl p-2 glow-border">
+                <img
+                  src={profileImage}
+                  alt="Prajwal Phaiju"
+                  className="w-full aspect-[4/5] object-cover rounded-2xl"
+                />
+
+                {/* Floating bagde*/}
+                <div className="absolute -bottom-4 -right-4 glass rounded-xl px-4 py-2 animate-float">
+                  <div className="flex items-center gap-3">
+                    <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse" />
+                    <span className="text-sm font-medium">
+                      Available For Work
+                    </span>
+                  </div>
+                </div>
+                {/* Stats Badge*/}
+                <div className="absolute -top-4 -left-4 glass rounded-xl px-4 py-3 animate-float animation-delay-500">
+                  <div className="text-sm font-bold text-muted-foreground">
+                    Production-Ready Mindset
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+
+        {/*Skills Sections */}
+        <div className="mt-20 animate-fade-in animation-delay-600">
+          <p className="text-sm text-muted-foreground mb-6 text-center">
+            Technologies I Work with
+          </p>
+          <div className="relative overflow-hidden">
+            <div className="flex animate-marquee">
+              {[...skills, ...skills].map((skill, index) => (
+                <div key={index} className="flex-shrink-0 px-6 py-4">
+                  <span className="text-xl font-semibold text-muted-foreground/50 hover:text-muted-foreground transition-colors">
+                    {skill}
+                  </span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 
+      animate-fade-in animation-delay-800"
+      >
+        <a
+          href="#about"
+          className="flex flex-col items-center gap-2 text-muted-foreground hover:text-primary transition-colors group "
+        >
+          <span className="text-xs uppercase tracking-wider">Scroll</span>
+          <ChevronDown className="w-6 h-6 animate-bounce" />
+        </a>
       </div>
     </section>
   );
-}; 
+};

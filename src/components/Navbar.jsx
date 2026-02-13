@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import logo from "@/assets/logo/logo-white-phaiju.png";
 import MobileLogo from "@/assets/logo/mobile-logo-white-phaiju.png";
 import { Button } from "./Button";
@@ -13,9 +13,21 @@ const navLinks = [
 ];
 export const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false);
+  const [isScorlled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50); //if ScrollY>50 then true otherwise false
+    };
+    window.addEventListener("scroll", handleScroll);
+
+    return () => window.removeEventListener("scroll", handleScroll); // adding this prevents memory leaks, (returns the callback function, this lets us remove the eventlistener )
+  }, []);
 
   return (
-    <header className="fixed top-0 left-0 right-0 bg-transperant py-5 z-50 ">
+    <header
+      className={`fixed top-0 left-0 right-0 transition-all duration-500 ${isScorlled ? "glass-strong py-3" : "bg-transperant py-5"} z-50 `}
+    >
       <nav className="container mx-2 px-6 flex items-center justify-between">
         <a href="#" className="group relative inline-block">
           {/* The "light" layer, initially hidden  */}
@@ -74,12 +86,13 @@ export const Navbar = () => {
               <a
                 key={index}
                 href={link.href}
+                onClick={() => setIsMobileMenuOpen(false)}
                 className="text-lg text-muted-foreground hover:text-foreground py-2"
               >
                 {link.label}
               </a>
             ))}
-            <Button>Contact Me</Button>
+            <Button onClick={() => setIsMobileMenuOpen(false)}>Contact Me</Button>
           </div>
         </div>
       )}
