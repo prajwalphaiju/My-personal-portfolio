@@ -1,25 +1,35 @@
-import {  Lightbulb, Users,ShieldCheck, Terminal, CheckCircle2 } from "lucide-react";
+import {
+  Lightbulb,
+  Users,
+  ShieldCheck,
+  Terminal,
+  CheckCircle2,
+} from "lucide-react";
 
 const highlights = [
   {
     icon: ShieldCheck,
-    title: "Finishing Strong", 
-    description: "I treat deadlines with professional accountability. I make sure work stays finished the first time, every time.",
+    title: "Finishing Strong",
+    description:
+      "I treat deadlines with professional accountability. I make sure work stays finished the first time, every time.",
   },
   {
     icon: Terminal,
-    title: "Production-Ready", 
-    description: "I build for the real world, not just my local machine. I focus on writing stable code that actually stays up.",
+    title: "Production-Ready",
+    description:
+      "I build for the real world, not just my local machine. I focus on writing stable code that actually stays up.",
   },
   {
     icon: CheckCircle2,
-    title: "Catching Bugs Early", 
-    description: "I use TypeScript to keep patterns clean and predictable. Catching errors during development is my default.",
+    title: "Catching Bugs Early",
+    description:
+      "I use TypeScript to keep patterns clean and predictable. Catching errors during development is my default.",
   },
   {
     icon: Users,
-    title: "Team Mindset", 
-    description: "I treat code as a shared asset. I prioritize clear documentation to keep the whole team moving forward.",
+    title: "Team Mindset",
+    description:
+      "I treat code as a shared asset. I prioritize clear documentation to keep the whole team moving forward.",
   },
 ];
 
@@ -31,11 +41,11 @@ export const About = () => {
           {/* Left Column */}
           <div className="space-y-5">
             <div className="animate-fade-in">
-              <span className="text-seconday-foreground text-medium font-medium tracking-wider uppercase">
+              <span className="text-secondary-foreground text-medium font-medium tracking-wider uppercase">
                 About Me
               </span>
             </div>
-            <h2 className="text-4xl md:text-5xl font-bold leading-tight animate-fade-in animation-delay-100 text-secondary-foreground">
+            <h2 className="text-4xl md:text-4xl font-bold leading-tight animate-fade-in animation-delay-100 text-secondary-foreground">
               Engineering Scalable Solutions with
               <span className="font-serif italic font-normal text-white">
                 {" "}
@@ -92,7 +102,9 @@ export const About = () => {
                   <item.icon className="w-6 h-6 text-primary" />
                 </div>
                 <h3 className="text-lg font-semibold mb-2">{item.title}</h3>
-                <p className="text-sm text-muted-foreground">{item.description}</p>
+                <p className="text-sm text-muted-foreground">
+                  {item.description}
+                </p>
               </div>
             ))}
           </div>
