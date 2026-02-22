@@ -15,10 +15,25 @@ const experiences = [
     current: false,
   },
   {
+    period: "Completed on 2025", 
+    role: "Bachelor of Information Technology",
+    company: "Crown Institute of Higher Education (CIHE)",
+    location: "Gungahlin, ACT",
+    description:
+      "Focused on software development and systems architecture, providing the core foundation for my current engineering projects.",
+    technologies: [
+      "Software Engineering",
+      "Data Structures",
+      "Web Development",
+    ],
+    current: false,
+    type: "education",
+  },
+  {
     period: "2022, Aug — Present",
     role: "Replenishment Team Member",
     company: "Bunnings Warehouse",
-    location: "Tuggernong, ACT",
+    location: "Tuggeranong, ACT",
     description:
       "Responsible for maintaining stock levels, organizing inventory, and ensuring that products are replenished efficiently to meet customer demand.",
     technologies: [
@@ -42,9 +57,9 @@ export const Experience = () => {
             My Journey
           </span>
           <h2 className="text-4xl md:text-5xl font-bold leading-tight animate-fade-in animation-delay-100 text-secondary-foreground">
-            Professional{" "}
+            Experience &{" "}
             <span className="font-serif italic font-normal text-white">
-              background
+              education.
             </span>
           </h2>
           <p className="text-muted-foreground animate-fade-in animation-delay-200">
@@ -77,7 +92,11 @@ export const Experience = () => {
                   className={`pl-8 md:pl-0 ${index % 2 === 0 ? "md:pr-16 md:text-right" : "md:col-start-2 md:pl-16"}`}
                 >
                   <div
-                    className={`glass p-6 rounded-2xl border border-primary/30 hover:border-primary/50 transition-all duration-500`}
+                    className={`glass p-6 rounded-2xl border ${
+                      experience.type === "education"
+                        ? "border-highlight/30"
+                        : "border-primary/30"
+                    } hover:border-primary/50 transition-all duration-500`}
                   >
                     <span className="text-sm text-primary font-medium ">
                       {experience.period}

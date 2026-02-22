@@ -45,6 +45,7 @@ export const Hero = () => {
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         {[...Array(25)].map((_, i) => (
           <div
+            key={`dot-${i}`}
             className="absolute w-1.5 h-1.5 rounded-full opacity-60 animate-pulse"
             style={{
               backgroundColor: "#20B2A6",
