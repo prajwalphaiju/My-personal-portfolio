@@ -109,9 +109,8 @@ export const Contact = () => {
             </span>
           </h2>
           <p className="text-muted-foreground animate-fade-in animation-delay-200">
-            Always open to discussing new projects, whether they involve complex
-            systems or full-stack development. If you have a technical challenge
-            that needs solving, feel free to reach out.
+            Got a project in mind? Drop me a message and let's talk about how we
+            can build it together
           </p>
         </div>
 
@@ -211,6 +210,47 @@ export const Contact = () => {
                 </div>
               )}
             </form>
+          </div>
+
+          {/* Contact Info */}
+          <div className="space-y-6 animate-fade-in animation-delay-400">
+            <div className="glass rounded-3xl p-8">
+              <h3 className="text-xl font-semibold mb-6">
+                Contact Information
+              </h3>
+              <div className="space-y-4">
+                {contactInfo.map((info, index) => (
+                  <a
+                    key={index}
+                    href={info.href}
+                    className="flex items-center gap-4 p-4 rounded-xl hover:bg-surface transition-colors group"
+                  >
+                    <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
+                      <info.icon className="w-5 h-5 text-primary" />
+                    </div>
+                    <div>
+                      <div className="text-sm text-muted-foreground">
+                        {info.label}
+                      </div>
+                      <div className="font-medium">{info.value}</div>
+                    </div>
+                  </a>
+                ))}
+              </div>
+            </div>
+            
+            {/* Availability Status */}
+            <div className="glass rounded-3xl p-8 border border-primary/30">
+              <div className="flex items-center gap-3 mb-4">
+                <span className="w-3 h-3 bg-green-500 rounded-full animate-pulse" />
+                <span className="font-medium">Currently Available</span>
+              </div>
+              <p className="text-muted-foreground text-sm">
+                I'm looking to join a team where I can work on complex technical
+                systems or full-stack projects. I'm focused on shipping clean,
+                production-ready code and solving real-world problems.
+              </p>
+            </div>
           </div>
         </div>
       </div>

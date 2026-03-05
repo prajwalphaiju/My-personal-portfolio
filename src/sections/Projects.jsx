@@ -1,6 +1,8 @@
 import { ArrowUpRight, Github } from "lucide-react";
 import { AnimatedBorderButton } from "@/components/AnimatedBorderButton";
 import EcommerceWebsiteImage from "@/assets/project_images/ecommerce-project.png";
+import ChatbotProjectImage from '@/assets/project_images/chatbot-project.png';
+import ValentineProjectImage from '@/assets/project_images/valentine-project.png';
 
 const projects = [
   {
@@ -13,13 +15,13 @@ const projects = [
     github: "https://github.com/prajwalphaiju/Ecommerce-Fullstack",
   },
   {
-    title: "Full-Stack Storefront & API",
+    title: "Interactive AI Assistant",
     description:
-      "A complete shopping system built with a React frontend and a custom Node.js backend. I moved the heavy logic—like price totals and delivery dates—to the server to keep the app secure. I’m currently refactoring the codebase into TypeScript to make it more reliable.",
-    image: { EcommerceWebsiteImage },
-    tags: ["React", "Node.js", "Express", "Custom API"],
-    link: "#",
-    github: "https://github.com/prajwalphaiju/Ecommerce-Fullstack",
+      "A production-ready chatbot featuring state persistence via LocalStorage and a custom 'useAutoScroll' hook for seamless UX. It demonstrates complex state management and real-time UI updates.",
+    image: { ChatbotProjectImage }, 
+    tags: ["React", "LocalStorage", "Custom Hooks", "Day.js"],
+    link: "#", 
+    github: "https://github.com/prajwalphaiju/chatbot-project",
   },
   {
     title: "Full-Stack Storefront & API",
@@ -31,13 +33,13 @@ const projects = [
     github: "https://github.com/prajwalphaiju/Ecommerce-Fullstack",
   },
   {
-    title: "Full-Stack Storefront & API",
+    title: "Interactive UX 'Valentine' Engine",
     description:
-      "A complete shopping system built with a React frontend and a custom Node.js backend. I moved the heavy logic—like price totals and delivery dates—to the server to keep the app secure. I’m currently refactoring the codebase into TypeScript to make it more reliable.",
-    image: { EcommerceWebsiteImage },
-    tags: ["React", "Node.js", "Express", "Custom API"],
-    link: "#",
-    github: "https://github.com/prajwalphaiju/Ecommerce-Fullstack",
+      "A creative exploration of DOM manipulation and dynamic CSS. Features complex event listeners that handle 'button jumping' logic and real-time element scaling based on user interaction counts.",
+    image: { ValentineProjectImage }, 
+    tags: ["JavaScript", "DOM Manipulation", "CSS Animations", "UX Design"],
+    link: "https://prajwalphaiju.github.io/Be-mine-valentine/", 
+    github: "https://github.com/prajwalphaiju/Be-mine-valentine",
   },
   {
     title: "Full-Stack Storefront & API",

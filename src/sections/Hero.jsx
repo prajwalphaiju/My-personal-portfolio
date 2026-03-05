@@ -94,14 +94,17 @@ export const Hero = () => {
             </div>
             {/* CTAs */}
             <div className="flex flex-wrap gap-4 animate-fade-in animation-delay-300">
-              <Button size="lg">
-                Contact Me <ArrowRight className="w-5 h-5" />
-              </Button>
-
-              <AnimatedBorderButton>
-                <Download className="w-5 h-5" />
-                Download Resume
-              </AnimatedBorderButton>
+              <a href="#contact">
+                <Button size="lg">
+                  Contact Me <ArrowRight className="w-5 h-5" />
+                </Button>
+              </a>
+              <a href="/prajwal-resume.pdf" download="Prajwal_Phaiju_Resume">
+                <AnimatedBorderButton>
+                  <Download className="w-5 h-5" />
+                  Download Resume 
+                </AnimatedBorderButton>
+              </a>
             </div>
             {/* Social Links*/}
             <div className="flex items-center gap-4 animate-fade-in animation-delay-400">
