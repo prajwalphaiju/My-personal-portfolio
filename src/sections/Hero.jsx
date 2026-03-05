@@ -24,7 +24,16 @@ const skills = [
   "GitHub Actions",
 ];
 
+const backgroundDots = Array.from({ length: 25 }).map(() => ({
+  left: Math.random() * 100,
+  top: Math.random() * 100,
+  duration: 5 + Math.random() * 25,
+  delay: Math.random() * 5,
+}));
+
 export const Hero = () => {
+
+  
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden">
       {/* Background Gradient */}
@@ -43,16 +52,16 @@ export const Hero = () => {
 
       {/* Blue DOts */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        {[...Array(25)].map((_, i) => (
+        {backgroundDots.map((dot, i) => (
           <div
-            key={`dot-${i}`}
+            key={i}
             className="absolute w-1.5 h-1.5 rounded-full opacity-60 animate-pulse"
             style={{
               backgroundColor: "#20B2A6",
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-              animation: `slow-drift ${5 + Math.random() * 25}s ease-in-out infinite`,
-              animationDelay: `${Math.random() * 5}s`,
+              left: `${dot.left}%`,
+              top: `${dot.top}%`,
+              animation: `slow-drift ${dot.duration}s ease-in-out infinite`,
+              animationDelay: `${dot.delay}s`,
             }}
           />
         ))}
