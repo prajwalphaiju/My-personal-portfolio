@@ -3,6 +3,7 @@ import { AnimatedBorderButton } from "@/components/AnimatedBorderButton";
 import EcommerceWebsiteImage from "@/assets/project_images/ecommerce-project.png";
 import ChatbotProjectImage from '@/assets/project_images/chatbot-project.png';
 import ValentineProjectImage from '@/assets/project_images/valentine-project.png';
+import HimalayanRecipeBookProjectImage from '@/assets/project_images/himalayan-recipe-book.png';
 
 const projects = [
   {
@@ -27,7 +28,7 @@ const projects = [
     title: "Full-Stack Storefront & API",
     description:
       "A complete shopping system built with a React frontend and a custom Node.js backend. I moved the heavy logic—like price totals and delivery dates—to the server to keep the app secure. I’m currently refactoring the codebase into TypeScript to make it more reliable.",
-    image: { EcommerceWebsiteImage },
+    image: { HimalayanRecipeBookProjectImage },
     tags: ["React", "Node.js", "Express", "Custom API"],
     link: "#",
     github: "https://github.com/prajwalphaiju/Ecommerce-Fullstack",
@@ -41,15 +42,7 @@ const projects = [
     link: "https://prajwalphaiju.github.io/Be-mine-valentine/", 
     github: "https://github.com/prajwalphaiju/Be-mine-valentine",
   },
-  {
-    title: "Full-Stack Storefront & API",
-    description:
-      "A complete shopping system built with a React frontend and a custom Node.js backend. I moved the heavy logic—like price totals and delivery dates—to the server to keep the app secure. I’m currently refactoring the codebase into TypeScript to make it more reliable.",
-    image: { EcommerceWebsiteImage },
-    tags: ["React", "Node.js", "Express", "Custom API"],
-    link: "#",
-    github: "https://github.com/prajwalphaiju/Ecommerce-Fullstack",
-  },
+  
 ];
 export const Projects = () => {
   return (

@@ -42,11 +42,11 @@ export const About = () => {
           {/* Left Column */}
           <div className="space-y-5">
             <div className="animate-fade-in">
-              <span className="text-secondary-foreground text-medium font-medium tracking-wider uppercase">
+              <span className="text-3xl text-secondary-foreground text-medium font-medium tracking-wider uppercase">
                 About Me
               </span>
             </div>
-            <h2 className="text-4xl md:text-4xl font-bold leading-tight animate-fade-in animation-delay-100 text-secondary-foreground">
+            <h2 className="text-4xl py-9 md:text-4xl font-bold leading-tight animate-fade-in animation-delay-100 text-secondary-foreground">
               Engineering Scalable Solutions with
               <span className="font-serif italic font-normal text-white">
                 {" "}
@@ -55,39 +55,15 @@ export const About = () => {
             </h2>
             <div className="space-y-4 text-muted-foreground animate-fade-in animation-delay-200">
               <p>
-                I've learned that the "it works on my machine" mindset is the
-                fastest way to slow down a team. I don't just write code to
-                finish a ticket; I build with the long-term maintenance in mind.
-                For me, that means choosing stability and scalability over quick
-                hacks, ensuring that what I deploy today doesn't become someone
-                else's headache tomorrow.
+                I build with a production-first mindset — focusing on stability, scalability, and long-term maintainability over quick fixes. I believe “it works on my machine” isn’t good enough for real-world systems.
               </p>
               <p>
-                I take a lot of pride in the technical details. Whether it's
-                using TypeScript to catch a breaking bug before it ever hits the
-                browser or structuring a Next.js app to be truly responsive, I
-                treat every project with professional discipline. I'm not just
-                looking to hit a deadline; I'm looking to deliver something that
-                is reliable enough for real people to use every day.
-              </p>
-              <p>
-                At the end of the day, I'm a problem solver who actually enjoys
-                the grind of figuring out a complex technical blocker. I thrive
-                in environments where I can dive into new tools, adapt quickly,
-                and contribute to a codebase that values quality over shortcuts.
-                I'm looking for a team that wants a developer who takes
-                ownership of their work and doesn't need constant hand-holding
-                to get things across the finish line.
+                I take pride in clean, reliable code. Whether it’s catching issues early with TypeScript or building responsive applications with modern frameworks, my goal is simple: deliver software that works consistently and adds real value.
               </p>
             </div>
             <div className="glass rounded-2xl p-6 glow-border animate-fade-in animation-delay-300">
               <p className="text-lg font-medium italic text-foreground">
-                My goal is simple: I want to build stuff that doesn't break. I'm
-                focused on moving past "it works on my machine" and actually
-                delivering code that is stable, clean, and easy for a team to
-                maintain. I'm here to bridge the gap between a side project and
-                a production-ready app, making sure every line of code I write
-                adds real value to the product.
+                From side projects to production systems — I build code that lasts.
               </p>
             </div>
           </div>

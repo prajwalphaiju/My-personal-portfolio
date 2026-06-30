@@ -24,6 +24,7 @@ const skills = [
   "GitHub Actions",
 ];
 
+// Generate random positions and animation durations for background dots
 const backgroundDots = Array.from({ length: 25 }).map(() => ({
   left: Math.random() * 100,
   top: Math.random() * 100,
